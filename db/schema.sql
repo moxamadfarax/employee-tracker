@@ -4,6 +4,7 @@ USE employees;
 DROP TABLE IF EXISTS department;
 DROP TABLE IF EXISTS roles;
 DROP TABLE IF EXISTS employee;
+
 CREATE TABLE department (
     id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(30),
@@ -23,7 +24,6 @@ CREATE TABLE employee (
     last_name VARCHAR(30),
     role_id INT,
     manager_id INT,
-    manager_confirm BOOLEAN,
     PRIMARY KEY (id),
     FOREIGN KEY (role_id) REFERENCES roles(id),
     FOREIGN KEY (manager_id) REFERENCES roles(id) ON DELETE
