@@ -1,8 +1,8 @@
 const inquirer = require("inquirer");
 
+// Prompting the user with the initial questions.
 const initialQuestions = () => {
   inquirer
-    // Prompting the user with the initial questions.
     .prompt({
       type: "list",
       name: "initial choices",
@@ -18,8 +18,9 @@ const initialQuestions = () => {
         "All finished!",
       ],
     })
-    // Using swtich case (which I have never used before btw) to determine what function to run depenfing on the choice selected.
+    // Using swtich case (which I have never used before btw) to determine what function to run depending on the choice selected.
     .then((data) => {
+      console.log("poo");
       switch (data["initial choices"]) {
         case "View All Employees":
           console.log("choice 1");
