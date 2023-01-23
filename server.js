@@ -1,5 +1,8 @@
 const inquirer = require("inquirer");
-const { viewDep, addDep } = require("./lib/Department");
+const { viewDep, addDep } = require("./lib/Departments");
+const { viewRoles } = require("./lib/Roles");
+const { viewEmp } = require("./lib/Employees");
+
 // Prompting the user with the initial questions.
 const initialQuestions = () => {
   inquirer
@@ -22,12 +25,18 @@ const initialQuestions = () => {
     .then((data) => {
       switch (data["initial choices"]) {
         case "View All Employees":
+          viewEmp().then(() => {
+            initialQuestions();
+          });
           break;
         case "Add New Employee":
           break;
         case "Update Employee Role":
           break;
         case "View All Roles":
+          viewRoles().then(() => {
+            initialQuestions();
+          });
           break;
         case "Add Role":
           break;
