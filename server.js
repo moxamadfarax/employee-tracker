@@ -53,6 +53,7 @@ const initialQuestions = () => {
     });
 };
 
-// Calling the function.
 module.exports = initialQuestions;
+
+// Calling the function.
 initialQuestions();
