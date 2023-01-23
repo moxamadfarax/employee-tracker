@@ -31,7 +31,8 @@ const initialQuestions = () => {
         case "View All Roles":
           viewRoles();
           break;
-        case "Add Role":
+        case "Add New Role":
+          addRole();
           break;
         case "View All Departments":
           viewDep();
@@ -48,7 +49,7 @@ const initialQuestions = () => {
 // Calling the function.
 module.exports = { initialQuestions };
 const { viewDep, addDep } = require("./lib/Departments");
-const { viewRoles } = require("./lib/Roles");
+const { viewRoles, addRole } = require("./lib/Roles");
 const { viewEmp } = require("./lib/Employees");
 
 initialQuestions();
