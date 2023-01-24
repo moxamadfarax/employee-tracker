@@ -29,3 +29,10 @@ CREATE TABLE employee (
     FOREIGN KEY (manager_id) REFERENCES roles(id) 
     ON DELETE SET NULL
 );
+
+CREATE TABLE manager (
+    id INT NOT NULL AUTO_INCREMENT,
+    first_name VARCHAR(30),
+    last_name VARCHAR(30),
+    PRIMARY KEY (id)
+);

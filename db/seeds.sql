@@ -16,17 +16,25 @@ VALUES
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES 
-    ("Mohamed", "Farah", 3, 1 ),
-    ('Khabib', 'Nurmagomedov', 2, 1 ),
+    ("Mohamed", "Farah", 3, 3 ),
+    ('Khabib', 'Nurmagomedov', 2, 2 ),
     ('Harvey', 'Specter', 2, 1 ),
-    ('Bo', 'Jackson', 3, NULL ),
+    ('Bo', 'Jackson', 3, 4 ),
     ('Lionel', 'Messi', 4, 2 ),
     ('Achraf', 'Hakimi', 4, 2 ),
-    ('Marty', 'McFly', 4, 2 ),
+    ('Marty', 'McFly', 4, 4 ),
     ('Pete', 'Castiglione', 5 ,3 ),
     ('Augustus', 'Gloop', 6, 3 ),
-    ('Hans', 'Landa', 6, 3 );
+    ('Hans', 'Landa', 6, 4 );
+
+INSERT INTO manager (first_name, last_name)
+VALUES 
+    ('Mike', "Ross"),
+    ('Jose', "Romero"),
+    ('Elijah', "Roufs"),
+    ('Kylian', "Mbappe");
 
 SELECT * FROM employee;
 SELECT * FROM department;
 SELECT * FROM roles;
+SELECT * FROM manager;
