@@ -1,3 +1,4 @@
+// Requiring requirer.
 const inquirer = require("inquirer");
 
 // Prompting the user with the initial questions.
@@ -41,15 +42,16 @@ const initialQuestions = () => {
           addDep();
           break;
         case "All finished!":
-          break;
+          process.exit();
       }
     });
 };
 
-// Calling the function.
+// Requirements that need to be required afterwards the main questions.
 module.exports = { initialQuestions };
 const { viewDep, addDep } = require("./lib/Departments");
 const { viewRoles, addRole } = require("./lib/Roles");
-const { viewEmp } = require("./lib/Employees");
+const { viewEmp, addEmp, updateEmp } = require("./lib/Employees");
 
+// Calling the function.
 initialQuestions();
