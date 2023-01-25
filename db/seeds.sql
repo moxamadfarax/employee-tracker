@@ -1,5 +1,12 @@
 USE workplace_db;
 
+INSERT INTO managers (first_name, last_name)
+VALUES 
+    ("Mohamed", "Farah"),
+    ('Bo', 'Jackson'),
+    ('Achraf', 'Hakimi'),
+    ('Jose', "Romero");
+    
 INSERT INTO departments (name)
 VALUES 
     ('Legal'),
@@ -42,16 +49,3 @@ managers.first_name AS 'Manager First Name',
 managers.last_name AS 'Manager Last Name', roles.title AS 'Employee Role' FROM employees
 INNER JOIN managers ON employees.manager_id = managers.id 
 INNER JOIN roles ON employees.role_id = roles.id;
-
-
-
-
-
-
-
-
-
-
-
-
-

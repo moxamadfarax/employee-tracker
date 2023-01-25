@@ -26,6 +26,7 @@ const initialQuestions = () => {
           viewEmp();
           break;
         case "Add New Employee":
+          addEmp();
           break;
         case "Update Employee Role":
           break;
@@ -51,7 +52,7 @@ const initialQuestions = () => {
 module.exports = { initialQuestions };
 const { viewDep, addDep } = require("./lib/Departments");
 const { viewRoles, addRole } = require("./lib/Roles");
-const { viewEmp } = require("./lib/Employees");
+const { viewEmp, addEmp, updateEmp } = require("./lib/Employees");
 
 // Calling the function.
 initialQuestions();
