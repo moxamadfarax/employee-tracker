@@ -51,7 +51,7 @@ const initialQuestions = () => {
 module.exports = { initialQuestions };
 const { viewDep, addDep } = require("./lib/Departments");
 const { viewRoles, addRole } = require("./lib/Roles");
-const { viewEmp, addEmp, updateEmp } = require("./lib/Employees");
+const { viewEmp } = require("./lib/Employees");
 
 // Calling the function.
 initialQuestions();

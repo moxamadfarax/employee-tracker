@@ -1,5 +1,6 @@
 USE workplace_db;
-INSERT INTO department (name)
+
+INSERT INTO departments (name)
 VALUES 
     ('Legal'),
     ('Sales'),
@@ -14,27 +15,43 @@ VALUES
     ('Lead Engineer', 150000, 3),
     ('Engineer', 120000, 3);
 
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
+INSERT INTO employees (first_name, last_name, role_id, manager_id, is_manager)
 VALUES 
-    ("Mohamed", "Farah", 3, 3 ),
-    ('Khabib', 'Nurmagomedov', 2, 2 ),
-    ('Harvey', 'Specter', 2, 1 ),
-    ('Bo', 'Jackson', 3, 4 ),
-    ('Lionel', 'Messi', 4, 2 ),
-    ('Achraf', 'Hakimi', 4, 2 ),
-    ('Marty', 'McFly', 4, 4 ),
-    ('Pete', 'Castiglione', 5 ,3 ),
-    ('Augustus', 'Gloop', 6, 3 ),
-    ('Hans', 'Landa', 6, 4 );
+    ("Mohamed", "Farah", 3, 3, true),
+    ('Khabib', 'Nurmagomedov', 2, 2, false),
+    ('Harvey', 'Specter', 2, 1, false),
+    ('Bo', 'Jackson', 3, 4, true),
+    ('Lionel', 'Messi', 4, 2, false),
+    ('Achraf', 'Hakimi', 4, 2, true),
+    ('Marty', 'McFly', 4, 4, false),
+    ('Pete', 'Castiglione', 5 ,3, false),
+    ('Augustus', 'Gloop', 6, 3, false),
+    ('Hans', 'Landa', 6, 4, false),
+    ('Mike', "Ross", 3, 4, false),
+    ('Jose', "Romero", 6, 3, true),
+    ('Elijah', "Roufs", 1, 4, false),
+    ('Kylian', "Mbappe", 2, 2, false);
 
-INSERT INTO manager (first_name, last_name)
-VALUES 
-    ('Mike', "Ross"),
-    ('Jose', "Romero"),
-    ('Elijah', "Roufs"),
-    ('Kylian', "Mbappe");
+INSERT INTO managers (first_name, last_name)
+SELECT first_name, last_name
+FROM employees
+WHERE is_manager = true;
 
-SELECT * FROM employee;
-SELECT * FROM department;
-SELECT * FROM roles;
-SELECT * FROM manager;
+SELECT employees.id, employees.first_name AS 'First Name', employees.last_name AS 'Last Name',
+managers.first_name AS 'Manager First Name', 
+managers.last_name AS 'Manager Last Name', roles.title AS 'Employee Role' FROM employees
+INNER JOIN managers ON employees.manager_id = managers.id 
+INNER JOIN roles ON employees.role_id = roles.id;
+
+
+
+
+
+
+
+
+
+
+
+
+
