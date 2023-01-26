@@ -1,17 +1,4 @@
 USE workplace_db;
-
-DROP TABLE managers IF EXISTS;
-DROP TABLE departments IF EXISTS;
-DROP TABLE roles IF EXISTS;
-DROP TABLE employes IF EXISTS;
-
-
-INSERT INTO managers (first_name, last_name)
-VALUES 
-    ("Mohamed", "Farah"),
-    ('Bo', 'Jackson'),
-    ('Achraf', 'Hakimi'),
-    ('Jose', "Romero");
     
 INSERT INTO departments (name)
 VALUES 
@@ -50,8 +37,7 @@ SELECT first_name, last_name
 FROM employees
 WHERE is_manager = true;
 
-SELECT employees.id, employees.first_name AS 'First Name', employees.last_name AS 'Last Name',
-managers.first_name AS 'Manager First Name', 
-managers.last_name AS 'Manager Last Name', roles.title AS 'Employee Role' FROM employees
-INNER JOIN managers ON employees.manager_id = managers.id 
-INNER JOIN roles ON employees.role_id = roles.id;
+SELECT * FROM managers;
+SELECT * FROM departments;
+SELECT * FROM roles;
+SELECT * FROM employees;
