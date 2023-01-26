@@ -1,5 +1,11 @@
 USE workplace_db;
 
+DROP TABLE managers IF EXISTS;
+DROP TABLE departments IF EXISTS;
+DROP TABLE roles IF EXISTS;
+DROP TABLE employes IF EXISTS;
+
+
 INSERT INTO managers (first_name, last_name)
 VALUES 
     ("Mohamed", "Farah"),
