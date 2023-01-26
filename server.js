@@ -29,6 +29,7 @@ const initialQuestions = () => {
           addEmp();
           break;
         case "Update Employee Role":
+          updateEmp();
           break;
         case "View All Roles":
           viewRoles();
