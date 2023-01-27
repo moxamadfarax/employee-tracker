@@ -17,17 +17,17 @@ VALUES
 
 INSERT INTO employees (first_name, last_name, role_id, manager_id, is_manager)
 VALUES 
-    ("Mohamed", "Farah", 3, 3, true),
+    ("Mohamed", "Farah", 3, NULL, true),
     ('Khabib', 'Nurmagomedov', 2, 2, false),
     ('Harvey', 'Specter', 2, 1, false),
     ('Bo', 'Jackson', 3, 4, true),
     ('Lionel', 'Messi', 4, 2, false),
-    ('Achraf', 'Hakimi', 4, 2, true),
-    ('Marty', 'McFly', 4, 4, false),
+    ('Achraf', 'Hakimi', 4, NULL, true),
+    ('Marty', 'McFly', 4, NULL, false),
     ('Pete', 'Castiglione', 5 ,3, false),
     ('Augustus', 'Gloop', 6, 3, false),
     ('Hans', 'Landa', 6, 4, false),
-    ('Mike', "Ross", 3, 4, false),
+    ('Mike', "Ross", NULL, NULL, false),
     ('Jose', "Romero", 6, 3, true),
     ('Elijah', "Roufs", 1, 4, false),
     ('Kylian', "Mbappe", 2, 2, false);
