@@ -21,7 +21,7 @@ This project utilizes technologies and dependencies like node, inquirer, mysql, 
 
 # Installation
 
-The required installations in order to use this project is node, inquirer, ctable, the my mysql2 package and and mysql. Make sure you have downloaded each of these dependencies or the project will not work.
+The required installations and dependencies in order to use this app is node, inquirer, ctable, the my mysql2 package and and mysql. Make sure you have downloaded each of these dependencies or the project will not work.
 
 # Usage
 
