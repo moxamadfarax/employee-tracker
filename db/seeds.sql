@@ -41,3 +41,4 @@ SELECT * FROM managers;
 SELECT * FROM departments;
 SELECT * FROM roles;
 SELECT * FROM employees;
+
